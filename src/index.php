@@ -41,6 +41,6 @@ echo "  \n";
 echo "<br>";
 echo 'Total Time: '.number_format($total_time,2).' seconds.';
 
-echo '<br><br><font size="1">Version 0.12</font>';
+echo '<br><br><font size="1">Version 0.13</font>';
 ?>
 
