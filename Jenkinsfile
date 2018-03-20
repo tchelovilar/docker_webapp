@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_TAG_PREFIX  = 'build'
         //
-	DOCKER_REPO = ''
+	//DOCKER_REPO = ''
         DOCKER_IMAGE = '485164690107.dkr.ecr.us-east-1.amazonaws.com/vilar-temp'
         DOCKER_URI = '$DOCKER_REPO$DOCKER_IMAGE'
     }
@@ -16,6 +16,8 @@ pipeline {
                 sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG_PREFIX$BUILD_NUMBER .'
                 // Tag Latest
                 sh 'docker tag $DOCKER_IMAGE:$DOCKER_TAG_PREFIX$BUILD_NUMBER $DOCKER_IMAGE:latest'
+                //
+                sh '$DOCKER_URI'
             }
         }
         stage('Sending image to registry') {
