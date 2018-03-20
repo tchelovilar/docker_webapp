@@ -6,7 +6,7 @@ pipeline {
         //
 	DOCKER_REPO = ''
         DOCKER_IMAGE = '485164690107.dkr.ecr.us-east-1.amazonaws.com/vilar-temp'
-        DOCKER_URI = $DOCKER_REPO$DOCKER_IMAGE
+        DOCKER_URI = '$DOCKER_REPO$DOCKER_IMAGE'
     }
 
     stages {
