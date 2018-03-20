@@ -15,7 +15,7 @@ pipeline {
   		// Tag with build number
                 sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG_PREFIX$BUILD_NUMBER .'
                 // Tag Latest
-                sh 'docker tag $DOCKER_IMAGE:$DOCKER_TAG_PREFIX$BUILD_NUMBER $DOCKER_NAME:latest'
+                sh 'docker tag $DOCKER_IMAGE:$DOCKER_TAG_PREFIX$BUILD_NUMBER $DOCKER_IMAGE:latest'
             }
         }
         stage('Sending image to registry') {
